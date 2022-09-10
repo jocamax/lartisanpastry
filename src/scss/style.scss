@@ -1,0 +1,206 @@
+
+@import 'config';
+
+body{
+    background-color: $backgroundColor;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navContainer{
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .navImage{
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .navLinksContainer{
+
+        .navLink{
+            color: white;
+            text-decoration:none ;
+            padding: 10px 25px;
+            font-size: 1.5rem;
+            font-weight: 100;
+            transition: all 0.1s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .navLink:hover{
+            border-bottom: 3px solid white;
+        }
+
+    }
+    @media screen and(max-width: 480px){
+        .navImage{
+            height: 100px;
+            width: auto;
+        }
+
+        .navLinksContainer{
+
+        .navLink{
+            font-size: 1.2rem;
+            padding: 10px 15px;
+        }
+    }
+    }
+    @media screen and(max-width: 300px){
+        .navImage{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+
+.headerContainer{
+    margin-top: 1rem;
+    height: 70vh;
+    img{
+        opacity: 0.35;
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+
+
+    }
+
+    .contentDiv{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 4rem;
+        font-weight: 100;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    .btn{
+        padding: 10px 25px;
+        margin-top: 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 100;
+        background-color: $backgroundColor;
+        color: white;
+        border: none;
+        text-decoration: none;
+        border-radius: 5px;
+   
+     }  
+
+     .btnWolt{
+        font-size: 17px;
+        background-color: rgb(0, 119, 255);
+        padding: 7px 20px;
+        opacity: 0.85;     
+        margin-top: 1rem;
+    }
+
+     //make h1 responsive
+        @media screen and (max-width: 580px){
+            h1{
+                font-size: 2.5rem;
+            }
+            .btn{
+                font-size: 1rem;
+            }
+            .btnWolt{
+                font-size: 12px;
+            }
+        }
+ 
+}
+
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    
+    .menuTitle{
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: white;
+        padding: 0 20px;
+        text-align: center;
+        text-shadow: 2px 2px 4px #000000;
+        border-bottom: 3px solid white;
+        margin-bottom: 1rem;
+    }
+
+    .menu{
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .menuItem{
+        // edit menu item
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 10px;
+        border-bottom: 1px solid rgb(31, 63, 1);
+        
+        .menuItemImg{
+            width: 280px;
+            border-radius: 5px;
+        }
+
+        .menuItemPrice{
+            font-size: 1.2rem;
+            font-weight: 100;
+            color: whitesmoke;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+    }
+
+    //menu item responsive 
+    @media screen and (max-width: 640px){
+        .menu{
+            width: 100%;
+        }
+        .menuItem{
+            flex-direction: column;
+            align-items: center;
+            .menuItemImg{
+                width: 85%;
+            }
+        }
+
+        .menuDesc{
+            width: 85%;
+        }
+    }
+
+
+}
